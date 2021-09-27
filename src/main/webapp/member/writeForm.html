@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>writeForm</title>
+<style type="text/css">
+
+</style>
+
+<script type="text/javascript">
+	function emailSelect(select){
+		index = select.selectedIndex;
+	    emailText = select.options[index].value;
+	   
+	    if(index==1){
+	    	document.getElementById("email2").value=emailText;
+	    }else if(index==2){
+	    	document.getElementById("email2").value=emailText;
+	    }else if(index==3){
+	    	document.getElementById("email2").value=emailText;
+	    }else document.getElementById("email2").value="" ;
+	}
+	
+</script>
+
+</head>
+<body>
+
+<table border="1" cellspacing="0" cellpadding="5" width="550px">
+	<tr>
+		<td width="100" align="center">이름</td>
+		<td>
+			<input type="text" name="name" id="name" size="30" maxlength="20" placeholder="이름 입력">	
+		</td>
+	</tr>
+	
+	<tr>
+		<td width="100" align="center">아이디</td>
+		<td>
+			<input type="text" name="id" id="id" size="30" maxlength="20" placeholder="아이디 입력">	
+		</td>
+	</tr>
+	
+	<tr>
+		<td width="100" align="center">비밀번호</td>
+		<td>
+			<input type="text" name="pwd" id="pwd" size="30"  maxlength="20" >	
+		</td>
+	</tr>
+	
+	<tr>
+		<td width="100" align="center">재확인</td>
+		<td>
+			<input type="text" name="repwd" id="repwd" size="30"  maxlength="20" >	
+		</td>
+	</tr>
+	
+	<tr>
+		<td width="100" align="center">성별</td>
+		<td>
+			<input type = "radio" name = "gender" id="gender_m" value="0" checked/>
+			<label for="gender_m">남</label>
+			<input type = "radio" name = "gender" id="gender_f" value="1" />
+			<label for="gender_f">여</label>
+		</td>
+		
+	</tr>
+	
+	<tr>
+		<td width="100" align="center">이메일</td>
+		<td>
+			<input type="text" name="email1" id="email1" size="15"  maxlength="15" >
+			@
+			<input type="text" name="email2" id="email2" size="15"  maxlength="15" >
+			
+			<select name="email3" onchange="emailSelect(this)">
+			<option >직접입력</option>
+			<option value="gmail.com">gmail.com</option>	
+			<option value="naver.com">naver.com</option>	
+			<option value="daum.net">daum.net</option>
+			</select>	
+			
+			
+		</td>
+	
+	</tr>
+	
+	<tr>
+		<td width="100" align="center">핸드폰</td>
+		<td>
+			<select name="tel1">
+			<option value="010">010</option>	
+			<option value="011">011</option>	
+			<option value="019">019</option>
+			</select>	
+			-
+			<input type="text" name="tel2" id="tel2" size="8"  maxlength="4" >
+			-
+			<input type="text" name="tel3" id="tel3" size="8"  maxlength="4" >
+		</td>
+	</tr>
+	
+	<tr>
+		<td width="100" align="center">주소</td>
+		<td>
+			<input type="text" name="zipcode" id="zipcode" size="20"  maxlength="20" >
+			<input type="button" value="우편번호 검색"><br>
+			<input type="text" name="addr1" id="addr1" size="60"  maxlength="60"  placeholder="주소">
+			<br>
+			<input type="text" name="addr2" id="addr2" size="60"  maxlength="60"  placeholder="상세 주소">
+		</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2" align="center">
+		<input type="button" value="회원가입"> 
+		<input type="reset" value="다시작성">
+		</td>
+		
+		
+	</tr>
+
+
+
+
+</table>
+
+
+
+</body>
+</html>
