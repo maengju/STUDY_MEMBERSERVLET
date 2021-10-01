@@ -52,10 +52,12 @@ public class MemberDAO {
 
 	public void write(MemberDTO memberDTO) {
 		String sql = "insert into member values(?,?,?,?,?,?,?,?,?,?,?,?,sysdate)";
+		
 		getConnection();
 		
 		try {
 			pstmt = conn.prepareStatement(sql);//생성
+			
 			pstmt.setString(1, memberDTO.getName());
 			pstmt.setString(2, memberDTO.getId());
 			pstmt.setString(3, memberDTO.getPwd());

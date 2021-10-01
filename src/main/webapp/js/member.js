@@ -162,17 +162,25 @@ function emailSelect(select) {
 
 function checkId(){
 	myForm = document.writeForm;
+	var id = document.getElementById("id").value;
 	
 	document.getElementById("idDiv").innerText ="";
-	if (document.getElementById("id").value == "") {
+	if (id == "") {
 		document.getElementById("idDiv").innerText = "아이디를 입력하세요"
 	} else {
 		var formOpen = window.open('about:blank','myFormViewer','width=400,height=200');
-		
 		myForm.action="http://localhost:8080/memberServlet/CheckIdServlet"
 		myForm.target = "myFormViewer";
 		myForm.method = "post";
 		myForm.submit();
+		
+		
+		/* 선생님이 한 방식
+		
+		window.open("http:localhost:8080/memberServlet/CheckIdServlet?id="+id,"","width=400,height=200");
+		
+		
+		*/
 		
 		
 		
